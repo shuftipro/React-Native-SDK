@@ -14,10 +14,6 @@ Supported architectures in SDK:
 
  - armeabi-v7a, x86, arm64-v8a, x86_64
 ## SDK Installation Guide 
-### Installation through npm (Expo)
-  ```
-  $ npm install expo-shuftipro-kyc --save`
-``` 
 
 ### SDK Installation Guide (React Native)
   ```
@@ -27,25 +23,8 @@ Supported architectures in SDK:
 ### Packages
 
 We find it fair to share our `package.json dependencies`  with you! here are the main dependencies used inside Shuftipro.
-* #### Dependencies in Expo
 
-```json
-"dependencies": {  
-  "base-64": "^0.1.0",  
-  "expo": "~38.0.8",  
-  "expo-av": "~8.2.1",  
-  "expo-camera": "~8.3.1",  
-  "prop-types": "^15.7.2",  
-  "react-native-easy-grid": "^0.2.2",  
-  "react-native-responsive-screen": "^1.4.1",  
-  "react-redux": "^7.2.1",  
-  "redux": "^4.0.5",  
-  "redux-persist": "^6.0.0",  
-  "redux-thunk": "^2.3.0",  
-  "expo-permissions": "~9.0.1",  
-  "expo-network": "~2.2.1"  
-},
-```
+
 * #### Dependencies in React Native
 ```json
 "dependencies": {  
@@ -66,18 +45,13 @@ We find it fair to share our `package.json dependencies`  with you! here are the
 
  ### Integration:
  See the sample project provided to learn the most common use. Make sure to build on real device.
- 
- * #### Expo
- ```
- $ import ShuftiPro from "expo-shuftipro-kyc"
- ```
 
 * #### React Native
  ```
  $ import ShuftiPro from "react-native-shuftipro-kyc"
  ```
   * ##### Android
-     goto ```ProjectName/android/app/build.gradle``` and add ```missingDimensionStrategy react-native-camera, 'general``` in defaultConfig: section.
+     goto ProjectName/android/app/build.gradle and add missingDimensionStrategy 'react-native-camera', 'general' in defaultConfig: section.
      like this :
   
      ```js
@@ -195,9 +169,9 @@ In verification without OCR, merchant gives us the data in keys as well as all t
  
  
 ## Usage
-* #### with accessToken
 ```js
 <ShuftiPro
+          isShow={true}
           requestPayload={verificationObj}
           verificationMode={"video"}
           async={true}
@@ -207,20 +181,8 @@ In verification without OCR, merchant gives us the data in keys as well as all t
          onResponseOkayButton={()=>{console.log("Okay Btn")}}
          cancelBtn={()=>{console.log("Cancel Btn")}}
          accessToken={""}
-       />
-```
-* #### with Client Id and Secret Key
-```js
-<ShuftiPro
-          requestPayload={verificationObj}
-          verificationMode={"video"}
-          async={true}
-          asyncResponseCallback={(response)=>{
-           console.log("Response : ", response)
-          }}
-         onResponseOkayButton={()=>{console.log("Okay Btn")}}
-         cancelBtn={()=>{console.log("Cancel Btn")}}
          basicAuth={{client_id:KEYS.BASIC_AUTH_UNAME,secret_key:KEYS.BASIC_AUTH_PWD }}
+
 />
 ```
 
