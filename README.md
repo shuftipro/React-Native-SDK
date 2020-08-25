@@ -107,86 +107,82 @@ In order to get verified, customers will have themselves verified through their 
 *  ### With OCR
 In verification with OCR, it means that the merchant has not provided us proofs (images/videos) and also no data in some keys. In this verification Shufti Pro will perform extraction of data from those proofs and finally verify the data.
  ``` js
- export const verificationObj = {  
-     reference: "Unique reference",  
-     country: "GB",  
-     language: "EN",  
-     email: "johndoe@example.com",  
-     callback_url: "http://www.example.com",  
-     face: true,  
-     document: {  
-              supported_types["passport","id_card","driving_license","credit_or_debit_card"],  
-              name: {  
-                  first_name: "",  
-                  last_name: "",  
-                  middle_name: ""  
-                  },  
-              dob: "",  
-              document_number: "",  
-              expiry_date: "",  
-              issue_date: "",  
-              fetch_enhanced_data: "1"  
-     },  
-     address: {  
-               full_address: "",  
-               name: {  
-                     first_name: "",  
-                     last_name: "",  
-                     middle_name: "",  
-                     fuzzy_match: ""  
-                     },  
-               supported_types: ["id_card", "utility_bill", "bank_statement"],  
-   },  
-    consent: {  
-         format: "printed",  
-         text: "This is a customized text"  
-              }  
-   
-   
- };
+ export const verificationObj = {
+	reference: "Unique reference",
+	country: "GB",
+	language: "EN",
+	email: "johndoe@example.com",
+	callback_url: "http://www.example.com",
+	face: true,
+	document: {
+		supported_types["passport", "id_card", "driving_license", "credit_or_debit_card"],
+			name: {
+				first_name: "",
+				last_name: "",
+				middle_name: ""
+			},
+			dob: "",
+			document_number: "",
+			expiry_date: "",
+			issue_date: "",
+			fetch_enhanced_data: "1"
+	},
+	address: {
+		full_address: "",
+		name: {
+			first_name: "",
+			last_name: "",
+			middle_name: "",
+			fuzzy_match: ""
+		},
+		supported_types: ["id_card", "utility_bill", "bank_statement"],
+	},
+	consent: {
+		format: "printed",
+		text: "This is a customized text"
+	}
+};
  ```
 
 *  ### Without OCR
 In verification without OCR, merchant gives us the data in keys as well as all the proofs required then Shufti Pro just have to verify the data. No customer interaction takes place in this kind of verification.
 
  ``` js
- export const verificationObj = {  
-     reference: "Unique reference",  
-     country: "GB",  
-     language: "EN",  
-     email: "johndoe@example.com",  
-     callback_url: "http://www.example.com",  
-     face: true,  
-     document: {  
-              supported_types["passport","id_card","driving_license","credit_or_debit_card"],  
-              name: {  
-                  first_name: "John",  
-                  last_name: "Carter",  
-                  middle_name: "Doe"  
-                  },  
-              dob: "1992-10-10",  
-              document_number: "2323-5629-5465-9990",  
-              expiry_date: "2025-10-10",  
-              issue_date: "2015-10-10",  
-              fetch_enhanced_data: "1"  
-     },  
-     address: {  
-               full_address: "3339 Maryland Avenue, Largo, Florida",  
-               name: {  
-                     first_name: "John",  
-                     last_name: "Carter",  
-                     middle_name: "Doe",  
-                     fuzzy_match: "1"  
-                     },  
-               supported_types: ["id_card", "utility_bill", "bank_statement"],  
-   },  
-    consent: {  
-         format: "printed",  
-         text: "This is a customized text"  
-              }  
-   
-   
- };
+export const verificationObj = {
+	reference: "Unique reference",
+	country: "GB",
+	language: "EN",
+	email: "johndoe@example.com",
+	callback_url: "http://www.example.com",
+	face: true,
+	document: {
+		supported_types["passport", "id_card", "driving_license", "credit_or_debit_card"],
+			name: {
+				first_name: "John",
+				last_name: "Carter",
+				middle_name: "Doe"
+			},
+			dob: "1992-10-10",
+			document_number: "2323-5629-5465-9990",
+			expiry_date: "2025-10-10",
+			issue_date: "2015-10-10",
+			fetch_enhanced_data: "1"
+	},
+	address: {
+		full_address: "3339 Maryland Avenue, Largo, Florida",
+		name: {
+			first_name: "John",
+			last_name: "Carter",
+			middle_name: "Doe",
+			fuzzy_match: "1"
+		},
+		supported_types: ["id_card", "utility_bill", "bank_statement"],
+	},
+	consent: {
+		format: "printed",
+		text: "This is a customized text"
+	}
+};
  ```
 
 
@@ -197,31 +193,39 @@ In verification without OCR, merchant gives us the data in keys as well as all t
 ## Usage
 * #### with accessToken
 ```js
-<ShuftiPro
-          requestPayload={verificationObj}
-          verificationMode={"video"}
-          async={true}
-          asyncResponseCallback={(response)=>{
-           console.log("Response : ", response)
-          }}
-         onResponseOkayButton={()=>{console.log("Okay Btn")}}
-         cancelBtn={()=>{console.log("Cancel Btn")}}
-         accessToken={""}
-       />
+            <ShuftiPro
+                requestPayload={verificationObj}
+                verificationMode={"video"}
+                async={true}
+                asyncResponseCallback={(response) => {
+                    console.log("Response : ", response)
+                }}
+                onResponseOkayButton={() => {
+                    console.log("Okay Btn")
+                }}
+                cancelBtn={() => {
+                    console.log("Cancel Btn")
+                }}
+                accessToken={""}
+            />
 ```
 * #### with Client Id and Secret Key
 ```js
-<ShuftiPro
-          requestPayload={verificationObj}
-          verificationMode={"video"}
-          async={true}
-          asyncResponseCallback={(response)=>{
-           console.log("Response : ", response)
-          }}
-         onResponseOkayButton={()=>{console.log("Okay Btn")}}
-         cancelBtn={()=>{console.log("Cancel Btn")}}
-         basicAuth={{client_id:KEYS.BASIC_AUTH_UNAME,secret_key:KEYS.BASIC_AUTH_PWD }}
-/>
+        <ShuftiPro
+                requestPayload={verificationObj}
+                verificationMode={"video"}
+                async={true}
+                asyncResponseCallback={(response) => {
+                    console.log("Response : ", response)
+                }}
+                onResponseOkayButton={() => {
+                    console.log("Okay Btn")
+                }}
+                cancelBtn={() => {
+                    console.log("Cancel Btn")
+                }}
+                basicAuth={{client_id: KEYS.BASIC_AUTH_UNAME, secret_key: KEYS.BASIC_AUTH_PWD}}
+            />
 ```
 
 ## Asyncronous Feedback
