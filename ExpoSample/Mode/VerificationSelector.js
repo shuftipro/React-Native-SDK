@@ -91,7 +91,7 @@ class VerificationSelector extends React.Component {
             payload:{
                 country: "Pk",
                 language: "EN",
-                email: "muhammad.imran@pf.com.pk",
+                email: "",
                 callback_url: "http://www.example.com",
             },
             createdPayload:{},
