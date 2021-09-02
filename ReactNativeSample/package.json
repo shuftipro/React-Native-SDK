@@ -1,0 +1,46 @@
+{
+  "name": "ShuftiProSdk",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.4",
+    "@react-native-community/netinfo": "^5.9.6",
+    "base-64": "^0.1.0",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-camera": "^3.36.0",
+    "react-native-easy-grid": "^0.2.2",
+    "react-native-fs": "^2.16.6",
+    "react-native-responsive-screen": "^1.4.1",
+    "react-native-shuftipro-kyc": "^1.1.5",
+    "react-native-video": "^5.1.1",
+    "react-native-video-controls": "^2.7.1",
+    "react-native-video-helper": "^1.4.4",
+    "react-native-webview": "^11.2.3",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-test-renderer": "16.11.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "ExpoShuftiProSdk",
+    "slug": "ExpoShuftiProSdk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./Assets/icon.png",
+    "splash": {
+      "image": "./Assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.shuftipro.sdk",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.shuftipro.sdk",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./Assets/favicon.png"
+    }
+  }
+}

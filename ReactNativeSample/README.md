@@ -86,7 +86,7 @@ We find it fair to share our `package.json` **dependencies** with you! here are 
     "react-native-easy-grid": "^0.2.2",
     "react-native-fs": "^2.16.6",
     "react-native-responsive-screen": "^1.4.1",
-    "react-native-shuftipro-kyc": "^1.1.5",
+    "react-native-shuftipro-kyc": "^1.1.2",
     "react-native-video": "^5.1.1",
     "react-native-video-controls": "^2.7.1",
     "react-native-video-helper": "^1.4.4",
@@ -853,4 +853,3 @@ If you have any questions/queries regarding implementation SDK please feel free 
    Date | Description |
  | :------------- | :------------- |
    11 Mar 2021 | Update design and add extra functionality|
-   1 Jun 2021 | Content update and improve user experience|
