@@ -8,6 +8,14 @@ AML screening services enable clients to gain an extra layer of security, by ide
 
 An easy to integrate API allows smooth customer onboarding and establishes longstanding trust while optimising customer processing costs altogether.
 
+<p float="center">
+  <img src="images/01.png" width="250" />
+  <img src="images/02.png" width="250" /> 
+  <img src="images/03.png" width="250" />
+  <img src="images/04.png" width="250" />
+  <img src="images/05.png" width="250" /> 
+  <img src="images/06.png" width="250" />
+</p>
 
 ## Table of contents
 * [General Requirements](#General-Requirements)
