@@ -145,7 +145,7 @@ class VerificationSelector extends React.Component {
     super(props);
     this.state = {
       paylaod: {
-        country: 'PK',
+        country: 'GB',
         language: 'EN',
         email: '',
         callback_url: 'http://www.example.com',
