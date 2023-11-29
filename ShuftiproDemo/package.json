@@ -11,7 +11,7 @@
   },
   "dependencies": {
     
-    "shuftipro-mobilesdk": "^0.0.3",
+    "shuftipro-mobilesdk": "^0.0.5",
     "react": "18.2.0",
     "react-native": "0.71.11"
   },
