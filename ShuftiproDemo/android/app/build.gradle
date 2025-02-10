@@ -91,7 +91,7 @@ def reactNativeArchitectures() {
 android {
     ndkVersion rootProject.ext.ndkVersion
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion 34
 
     namespace "com.testshufti"
     defaultConfig {
@@ -145,6 +145,10 @@ android {
             }
 
         }
+    }
+
+     dataBinding {
+        enabled = true
     }
 }
 
